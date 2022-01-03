@@ -1,0 +1,14 @@
+toolbox-latex
+=============
+
+The latest image is compatible with:
+
+- linux/amd64
+- linux/arm64
+
+
+Usage
+-----
+
+## Start a toolbox container using Docker
+$ sudo docker run --rm -it idianal/toolbox-latex
