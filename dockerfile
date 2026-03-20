@@ -1,8 +1,8 @@
 FROM debian
 LABEL maintainer="Al Idian <al.idian@acm.org>"
 
-ENV LANG C.UTF-8
-ENV LC_ALL C.UTF-8
+ENV LANG=C.UTF-8
+ENV LC_ALL=C.UTF-8
 
 RUN apt update && \
     apt install -y curl git locales sudo tmux vim wget && \
@@ -16,5 +16,9 @@ RUN apt update && \
     chown -R idianal:idianal /home/idianal
 
 USER idianal
+
+WORKDIR /home/idianal/dotfiles
+RUN git pull
+
 WORKDIR /home/idianal
 CMD ["bash"]
