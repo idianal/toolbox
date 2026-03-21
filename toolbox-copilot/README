@@ -1,6 +1,6 @@
-= toolbox
+= toolbox-copilot
 Al Idian <al.idian@acm.org>
-:description: Containerized development environments
+:description: Containerized development environments with Copilot
 
 The latest image is compatible with:
 
@@ -14,12 +14,12 @@ Usage:
 # Build and push images to Docker Hub
 docker buildx build \
     --platform linux/amd64,linux/arm64 \
-    -t idianal/toolbox:latest \
-    -t idianal/toolbox:<version> \
+    -t idianal/toolbox-copilot:latest \
+    -t idianal/toolbox-copilot:<version> \
     --push \
     -f dockerfile \
     .
 
 # Start a toolbox container using Docker
-docker run --rm -it idianal/toolbox
+docker run --rm -it idianal/toolbox-ai
 ----

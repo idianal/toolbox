@@ -1,0 +1,10 @@
+FROM idianal/toolbox
+LABEL maintainer="Al Idian <al.idian@acm.org>"
+
+USER idianal
+WORKDIR /home/idianal
+
+RUN curl -fsSL https://gh.io/copilot-install | bash
+ENV PATH="/home/idianal/.local/bin:${PATH}"
+
+CMD ["bash"]

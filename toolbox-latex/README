@@ -1,6 +1,6 @@
 = toolbox-latex
 Al Idian <al.idian@acm.org>
-:description: Containerized development environments
+:description: Containerized development environments with LaTeX
 
 The latest image is compatible with:
 
@@ -11,6 +11,15 @@ Usage:
 
 [source,bash]
 ----
+# Build and push images to Docker Hub
+docker buildx build \
+    --platform linux/amd64,linux/arm64 \
+    -t idianal/toolbox-latex:latest \
+    -t idianal/toolbox-latex:<version> \
+    --push \
+    -f dockerfile \
+    .
+
 # Start a toolbox container using Docker
 docker run --rm -it idianal/toolbox-latex
 ----
